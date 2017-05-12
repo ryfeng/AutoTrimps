@@ -167,14 +167,18 @@ function autoGenerator2() {
   const mode = getPageSetting('AutoGen2'); // None : Microtick : Cap : Overclock
   if (!mode) // Default: move on
     return;
+  else if (mode == 3) {
+    var trimpsToNextCoord = game.portal.Coordinated.currentSend * 3 - game.resources.trimps.realMax();
+    var nextOverclockTick = scaleNumberForBonusHousing(getGeneratorTickAmount() * (1 - game.generatorUpgrades.Overclocker.modifier));
+    
+    changeGeneratorState(FUEL);
+    return;
+  }
 
   const fuel = game.global.magmaFuel;
   const want = mode == 1 ? getFuelBurnRate() : getGeneratorFuelCap();
-  const overclock = mode == 3;
   if (!game.global.generatorMode) { // Currently: Gain Mi
-    if (overclock)
-	  changeGeneratorState(FUEL);
-    else if (fuel < want)
+    if (fuel < want)
       changeGeneratorState(game.permanentGeneratorUpgrades.Hybridization.owned ? HYBRID : FUEL);
   } else if (fuel >= want) // Not gaining Mi when we should
     changeGeneratorState(MI);
