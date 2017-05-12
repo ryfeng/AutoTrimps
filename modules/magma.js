@@ -167,7 +167,7 @@ function autoGenerator2() {
   const mode = getPageSetting('AutoGen2'); // None : Microtick : Cap : Overclock
   if (!mode) // Default: move on
     return;
-  else if (mode == 3) {
+  else if (mode == 3 && game.generatorUpgrades["Overclocker"].upgrades > 0) { // Only trigger overclock if we have Overclocker upgrades.
     changeGeneratorState(FUEL);
     return;
   }
