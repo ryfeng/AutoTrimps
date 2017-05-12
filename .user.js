@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AutoTrimps-unimod
 // @namespace    https://github.com/ryfeng/AutoTrimps
-// @version      2.1.5.3u2-unimod-4-07-2017+Modular
+// @version      2.1.6-fork
 // @description  Automate all the trimps!
 // @author       zininzinin, spindrjr, Ishkaru, genBTC, Unihedro
 // @include        *trimps.github.io*
