@@ -168,8 +168,8 @@ function autoGenerator2() {
   if (!mode) // Default: move on
     return;
   else if (mode == 3) {
-	changeGeneratorState(FUEL);
-	return;
+    changeGeneratorState(FUEL);
+    return;
   }
 
   const fuel = game.global.magmaFuel;
