@@ -164,9 +164,13 @@ function autoGenerator2() {
   if (getPageSetting('AutoGen2Override') && autoGenOverrides())
     return;
 
-  const mode = getPageSetting('AutoGen2'); // None : Microtick : Cap
+  const mode = getPageSetting('AutoGen2'); // None : Microtick : Cap : Overclock
   if (!mode) // Default: move on
     return;
+  else if (mode == 3) {
+    changeGeneratorState(FUEL);
+    return;
+  }
 
   const fuel = game.global.magmaFuel;
   const want = mode == 1 ? getFuelBurnRate() : getGeneratorFuelCap();
