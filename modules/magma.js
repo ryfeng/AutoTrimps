@@ -174,6 +174,7 @@ function autoGenerator2() {
 
   const fuel = game.global.magmaFuel;
   const want = mode == 1 ? getFuelBurnRate() : getGeneratorFuelCap();
+  
   if (!game.global.generatorMode) { // Currently: Gain Mi
     if (fuel < want)
       changeGeneratorState(game.permanentGeneratorUpgrades.Hybridization.owned ? HYBRID : FUEL);

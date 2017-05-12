@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AutoTrimps-unimod
-// @namespace    https://github.com/unihedro/AutoTrimps
-// @version      2.1.5.3u2-unimod-4-07-2017+Modular
+// @namespace    https://github.com/ryfeng/AutoTrimps
+// @version      2.1.6-fork
 // @description  Automate all the trimps!
 // @author       zininzinin, spindrjr, Ishkaru, genBTC, Unihedro
 // @include        *trimps.github.io*
@@ -11,5 +11,5 @@
 
 var script = document.createElement('script');
 script.id = 'AutoTrimps-script';
-script.src = 'https://unihedro.github.io/AutoTrimps/AutoTrimps2.js';
+script.src = 'https://ryfeng.github.io/AutoTrimps/AutoTrimps2.js';
 document.head.appendChild(script);
